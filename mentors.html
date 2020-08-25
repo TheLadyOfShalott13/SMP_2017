@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+	<head>
+		<title>Mentors - Student Mentorship Programme || VNIT, Nagpur</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style> /*need to put this in a separate file*/
+
+    		#Section1 {
+    			background-image: url(a1.png);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			color: white;
+    		}
+
+    		#Section2 {
+    			color: black;
+    		}
+
+    		.bg {
+    			background-image: url(vis1.jpg);
+    			background-position: center;
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    		}
+
+    		#Section3 {
+				/* background-image:url(IMAGE1.png);
+    			background-size: auto; */
+    			color: black;
+    		}
+
+    		.mentor {
+    			padding-top: 15px;
+    		}
+
+    		body, html {
+    			width: auto;
+    			overflow-x: hidden;
+    			font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;    			 
+    		}
+
+    		.navbar {
+    			background-color: rgb(25,73,8);
+    			font-size: 14px;
+    		}
+
+    		.nav-tabs > .active {
+    			border-style: solid;
+    			border-color: black;
+    			border-top-width: 3px;
+    			border-right-width: 3px;
+    			border-left-width: 3px;
+    			border-bottom: none;
+    		}
+
+    		.navbar-toggler {
+    			height: 27px;
+    			float: center;
+    		}
+
+    		.navbar-toggler-icon {
+    			height: 20px;
+    			position: relative;
+    			top:-3px;
+    		}
+
+    		.nav-item {
+    			padding: 0px 12px 0px 12px;
+    		}
+
+    		#menubutton {
+    			position: relative;
+    			left: 43%;
+    			top:-1px;
+    		}
+
+			.tab-mentor {
+				padding-top: 15px;
+				color: green;
+			}
+
+			.navbar2 {
+				padding: 10px 15px;
+				font-size: 17px;
+			}
+
+			.card {
+				background-color: #ffff99;
+			}
+
+    		#Section6 {
+    			background-color: black;
+  				color: grey;
+  			 	font-size: 14px;
+    		}
+
+    		@media only screen and (max-width: 992px) {
+    			#timerow {
+    				display: none;
+    			}
+    		}
+
+    		@media only screen and (min-width: 992px) {
+    			#navbar-search, #mob-btn {
+    				display: none;
+    			}
+    		}
+
+    		@media only screen and (max-width: 768px) {
+    			.navbar2 {
+    				padding: 6px;
+    				font-size: 14px;
+    			}
+    		}
+
+    	</style>
+
+    	<script type="text/javascript">
+    		function startTime() {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('time').innerHTML =
+			    h + ":" + m + ":" + s;
+			    var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+
+			var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			var d = new Date(dateString);
+			var dayName = days[d.getDay()];
+			document.getElementById('weekday').innerHTML=dayName;
+
+    	</script>
+
+	</head>
+
+	<body onload="startTime()">
+
+		
+			<div id="Section1">
+				<div class="container">
+					<div class="row" style=" padding-top: 15px; padding-bottom: 10px;">
+						<div class="col-md-6">
+							<img src="label-v11.png" width="90%" id="logo">
+						</div>
+						<div class="col-md-6" id="timerow">
+							<div class="row" style="padding-bottom: 7px;"> 
+
+								<!--the reason why the text didn't float to the right is because I was definining it for the entire row and it was already full in the container space. I need to define for the text itself.-->
+
+								<div style="display: inline-block; text-align: right; width: 100%; font-size: 13px;">
+									Contact Us&nbsp;&nbsp;&nbsp;&nbsp;
+									Maps&nbsp;&nbsp;&nbsp;&nbsp;
+									Sitemap&nbsp;&nbsp;
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									Abu Dhabi,&nbsp;Mon&nbsp
+									<span id="time"></span>
+									<script>//console.log(dayName);//need to find a way to display day here</script>
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									<span style="font-size: 14px;">
+										<i class="fa fa-facebook-square"></i>&nbsp;
+										<i class="fa fa-twitter-square"></i>&nbsp;
+										<i class="fa fa-linkedin-square"></i>&nbsp;
+										<i class="fa fa-instagram"></i>
+									</span>
+								</div>
+								<script type="text/javascript">
+									var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+									var d = new Date(dateString);
+									var dayName = days[d.getDay()];
+									document.getElementById('weekday').innerHTML=dayName;
+						 			//document.getElementById('date').innerHTML=Date();
+								</script> 
+							</div>
+							<div class="row">
+								<form role="form" class="form-horizontal" style="display: inline-block; width: 100%; text-align: right;">
+									<div class="form-group">
+										<div class="form-row float-right">
+											<div class="col-md-auto">
+												<input placeholder=" Search..." size="30" style="color: black;">
+												<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+											</div>
+											<div class="col">
+												<button type="button" class="btn btn-warning btn-sm">Student Portal Login</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark py-0">
+				<div class="container">
+					<div id="menubutton" class="py-1">
+						<button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbar01" aria-controls="navbar01" aria-expanded="false" aria-label="Toggle navigation">
+		        			<span class="navbar-toggler-icon"></span>
+		      			</button>
+		      		</div>
+
+			      	<div class="collapse navbar-collapse" id="navbar01">
+			        	<ul class="navbar-nav mr-auto">
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">About</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">Academics</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			        			<b><a class="nav-link active" href="#">Mentors<span class="sr-only">(current)</span></a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">VNIT mainsite</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">Forum</a></b>
+			        		</li>
+			        	</ul>
+			        	<form class="form-inline my-2 my-md-0" id="navbar-search">
+			        		<input placeholder=" Search..." size="40" style="color: black;">
+							<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+			      	</div>
+			    </div>
+		    </nav>
+
+		    <div id="Section2">
+		    	<div class="container">
+		    		<div class="row bg">
+		    			<div class="col-md-12" style="text-align: center; padding: 3rem 4rem;">
+				    		<h1><b>Meet our Mentors</b></h1>
+				    	</div>		    			
+		    		</div>
+		    	</div>
+		    </div>
+
+		    <div id="Section3">
+		    	<div class="container">
+		    		<nav class="tab-mentor">
+  						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+    						<a class="nav-item nav-link navbar2 active" id="nav-arc-tab" data-toggle="tab" href="#nav-arc" role="tab" aria-controls="nav-arc" aria-selected="true">ARC</a>
+    						<a class="nav-item nav-link navbar2" id="nav-chem-tab" data-toggle="tab" href="#nav-chem" role="tab" aria-controls="nav-chem" aria-selected="false">CHEM</a>
+    						<a class="nav-item nav-link navbar2" id="nav-civ-tab" data-toggle="tab" href="#nav-civ" role="tab" aria-controls="nav-civ" aria-selected="false">CIV</a>
+    						<a class="nav-item nav-link navbar2" id="nav-cse-tab" data-toggle="tab" href="#nav-cse" role="tab" aria-controls="nav-cse" aria-selected="false">CSE</a>
+    						<a class="nav-item nav-link navbar2" id="nav-ece-tab" data-toggle="tab" href="#nav-ece" role="tab" aria-controls="nav-ece" aria-selected="false">ECE</a>
+    						<a class="nav-item nav-link navbar2" id="nav-eee-tab" data-toggle="tab" href="#nav-eee" role="tab" aria-controls="nav-eee" aria-selected="false">EEE</a>
+    						<a class="nav-item nav-link navbar2" id="nav-mech-tab" data-toggle="tab" href="#nav-mech" role="tab" aria-controls="nav-mech " aria-selected="false">MECH</a>
+    						<a class="nav-item nav-link navbar2" id="nav-meta-tab" data-toggle="tab" href="#nav-meta" role="tab" aria-controls="nav-meta" aria-selected="false">META</a>
+    						<a class="nav-item nav-link navbar2" id="nav-min-tab" data-toggle="tab" href="#nav-min" role="tab" aria-controls="nav-min" aria-selected="false">MIN</a>
+
+  						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent" style="padding-bottom: 20px;">
+	  					<div class="tab-pane fade show active" id="nav-arc" role="tabpanel" aria-labelledby="nav-arc-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Architecture and Planning</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Yogesh Jha</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Eesha Itthadi</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Amol Jacob</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Shraddha Bhangdia</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Vrinda Tapadia</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-chem" role="tabpanel" aria-labelledby="nav-chem-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Chemical Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Anant Verma</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Vaishakhi Suresh</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Tary Mathew</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Srinidhi Iyyengar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Ojas Jain</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Mahin Sapkal</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Nazal Naeem</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Aayushie Pareek</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-civ" role="tabpanel" aria-labelledby="nav-civ-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Civil Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Karishma Lokharkar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Samruddhi Deshpande</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Akshay Nale</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Parul Gupta</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Abhishek Tiwari</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Prateek Gaikwad</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-cse" role="tabpanel" aria-labelledby="nav-cse-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Computer Science and Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Vatsal Gosar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Umesh Sharnagat</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Harshada Kumbhare</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Anushka Jejani</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Akshay Bhawsar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Nikita Dhole</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Dewang Palav</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Snehal Dange</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-ece" role="tabpanel" aria-labelledby="nav-ece-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Electronics and Communication Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Shweta Kulkarni</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Anusha Sharma</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Pooja Gupta</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Andrew Menezes</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Kuldeep Rajawat Singh</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Khushdeep Singh</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Manasvi Laddha</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-eee" role="tabpanel" aria-labelledby="nav-eee-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Electrical and Electronics Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Shantanu Date</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Avipsita Das</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Uma Deepthi</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Srinidhi Bollisetty</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Mohit Karekar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Rushikesh Deshmukh</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Darshan Pande</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Prateek Kundawar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-mech" role="tabpanel" aria-labelledby="nav-mech-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Mechanical Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Ninad G.</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Devika Mangde</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Mahesh Krishnan</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Shekhar Shrikesh</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Ajit Rathore</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Craig Menezes</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Jomin Thomas</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-meta" role="tabpanel" aria-labelledby="nav-meta-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Metallurgy Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Aishwarya Nale</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Yogeshri Deshpande</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Ankita Khobragade</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Amogh Kale</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Nishant Kumar</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="tab-pane fade" id="nav-min" role="tabpanel" aria-labelledby="nav-min-tab">
+	  						<div class="row">
+								<div class="col-md-12 mentor" style="text-align: center;">
+									<h3>Mining Engineering</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/female-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Tina Vinayak</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 mentor">
+									<div class="card">
+										<img class="card-img-top" src="mentors/male-icon.png">
+										<div class="card-body">
+											<h5 class="card-title">Agil Mohath</h5>
+											<p class="card-text">A dedicated guitarist with a passion for design and innovation</p>
+											<a href="#" class="card-link"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="card-link"><i class="fa fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+	  					</div>
+					</div>
+		    	</div>
+		    </div>
+
+		<div id="Section6">
+			<div class="container">
+				<div class="row" style="border-width: 0px 0px 1px 0px; border-style: solid;">
+					<div class="col-md-10">
+						<br><h5 style="position: relative; top: 7px; font-size: 17px;">Visvesvaraya National Institute of Technology, Nagpur</h5>
+					</div>
+					<div class="col-md-2">
+						<br><h4>
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+							<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+						</h4>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 10px;">
+					<div class="col-md-4">
+						South Ambazari Road,<br>
+						Abhyankar Nagar, Nagpur,<br> 
+						Maharashtra - 440010, India<br>
+						+91 712 222 2828
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Contact Us</a><br>
+							<a href="#" style="color: grey;">Map and Directions</a><br>
+							<a href="#" style="color: grey;">Emergency Information</a><br>
+						</b>
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Privacy Policy</a><br>
+							<a href="#" style="color: grey;">VNIT mainsite</a><br>
+							<a href="#" style="color: grey;">Counsellor login</a><br>
+							<a href="#" style="color: grey;">Sitemap</a>
+						</b>
+					</div>
+					<div class="col-md-2">
+						<b>
+							<a href="#" style="color: grey;">Link1 </a><br>
+							<a href="#" style="color: grey;">Lorem Ipsum Dolor Ipsum</a><br>
+							<a href="#" style="color: grey;">Some Information</a><br>
+						</b>
+					</div>
+				</div>
+				<div class="row"><br></div>
+				<div class="row">
+					<div class="col-md-12" style="text-align: center; font-size: 11px; color: #4d4d4d;">
+						Copyright 2017&nbsp;&copy;&nbsp;Visvesvaraya National Institute of Technology, Nagpur<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>

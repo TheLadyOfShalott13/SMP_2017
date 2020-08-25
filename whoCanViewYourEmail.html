@@ -1,0 +1,303 @@
+ <!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Account</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style type="text/css">
+			.fa {
+				font-size: 17px;
+			}
+
+			.flex-column > .nav-item > a {
+				color: #141f1f;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+			.flex-column > .nav-item > a:hover {
+				color: white;
+			}
+
+			.fa:hover {
+				color: inherit;
+			}
+
+			/* ---------------------------------------------------
+    			SIDEBAR STYLE
+			----------------------------------------------------- */
+
+			.wrapper {
+				display: flex;
+				align-items: stretch;
+				width: 100%;
+			}
+
+			#sidebar {
+				font-size: 14px; 
+				background-color: #53c68a; 
+				color: #527a7a;
+				min-width: 185px;
+				max-width: 185px;
+				height: 100vh;
+				transition: all 0.3s;
+			}
+
+			#sidebar.active {
+				margin-left: -185px;
+			}
+
+			.sidebarList > .active {
+				background-color: rgba(255,255,255,0.4);
+			}
+
+			.navbar-brand {
+				width: 170px;
+				text-align: center;
+			}
+
+			@media only screen and (max-width: 768px) {
+    			
+			}
+
+			@media only screen and (min-width: 768px) {
+				#sidebarCollapse {
+					display: none;
+				}
+			}
+
+			#content {
+				padding: 20px;
+				width: 100vw;
+				padding-right: 50px;
+				font-size: 15px;
+			}
+
+			#emailList > li {
+				padding: 15px 0px 15px 7px;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: grey;
+				background-color: #d5d5c3;
+				position: relative;
+				left: -40px;
+			}
+
+			#settingsList > a {
+				color: black;
+			}
+
+			.list-icons {
+				font-size: 16px;
+				font-weight: bold;
+				padding-right: 2px;
+			}
+
+			.fa-check {
+				display: none;
+			}
+
+			.active > .fa-check {
+				display: block;
+			}
+		</style>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				var sideHeight = jQuery('.menu_manager').height();
+				jQuery('#sidebar').css('height', sideHeight + 'px');
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark p-0">
+      		<a class="navbar-brand" href="#">Fixed navbar</a>
+      		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="navbar-toggler-icon"></span>
+      		</button>
+      		<div class="collapse navbar-collapse" id="navbarCollapse">
+      			
+      			<form class="form-inline mt-2 mt-md-0 mr-auto"> <!--style="position: relative; left: -16px;" -->
+       				<input class="form-control mr-sm-0" style="border-radius:0" size="20" type="text" placeholder="Enter query here..." aria-label="Search">
+          			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        		</form>
+        		<ul class="navbar-nav">
+          			<li class="nav-item px-1">
+            			<a class="nav-link" href="#">Welcome, Nisreen Khambaty</a>
+          			</li>
+          			<li class="nav-item px-2" style="background-color: black;">
+            			<a class="nav-link" href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log out</a>
+          			</li>
+        		</ul>
+      		</div>
+    	</nav> 
+
+	    <div class="wrapper">		
+			<nav id="sidebar">
+				<h6 class="px-3 mt-3 mb-1">Account Options</h6>
+				<ul class="nav flex-column sidebarList">
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+					        <i class="fa fa-home" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Newsfeed <span class="sr-only">(current)</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				      	<a class="nav-link" href="#">
+				          	<i class="fa fa-bell-o" aria-hidden="true"></i>
+				          	&nbsp;&nbsp;Notifications&nbsp;<span class="badge badge-warning">1</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				      	<a class="nav-link" href="#">
+				       		<i class="fa fa-inbox" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Inbox&nbsp;<span class="badge badge-danger">3</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+					        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					        &nbsp;&nbsp;Compose
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-trash-o" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Trash&nbsp;<span class="badge badge-secondary">1</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-rss" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Forum
+				    	</a>
+				    </li>
+				</ul>
+				<h6 class="px-3 mt-4 mb-1">Common links</h6>
+				<ul class="nav flex-column sidebarList">
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-university" aria-hidden="true"></i>
+				            &nbsp;&nbsp;VNIT mainsite
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-list" aria-hidden="true"></i>
+				            &nbsp;&nbsp;SMP mainsite
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-users" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Mentors
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+							<i class="fa fa-address-book-o" aria-hidden="true"></i>
+				        	&nbsp;&nbsp;Contact Us
+				        </a>
+				    </li>
+				</ul>
+				<h6 class="px-3 mt-4 mb-1">Information</h6>
+				<ul class="nav flex-column sidebarList">
+				  	<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+							&nbsp;&nbsp;My Profile
+						</a>
+					</li>
+					<li class="nav-item active">
+							<a class="nav-link" href="#">
+								<i class="fa fa-cog" aria-hidden="true"></i>
+								&nbsp;&nbsp;Settings
+							</a>
+					</li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-question-circle" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Help
+				        </a>
+				    </li>
+				</ul>
+			</nav>
+
+			<div id="content">
+
+				<h3>Settings</h3>
+				<button type="button" id="sidebarCollapse" class="btn btn-info btn-sm">
+	      			<i class="fa fa-align-left"></i>
+	      			<span>Open Sidebar</span>
+	      		</button>
+	      		<!-- Example split danger button -->
+				<span style="font-size: 12px; color: grey;"><a href="#">Settings</a> > <a href="#">Blocking and Privacy Options</a> > Who can view your email</span>
+				<br><br>
+
+				<b>Who can view your email?</b>
+				<br><br>
+
+	      		<ul class="list-group" id="settingsList">
+  					<li class="list-group-item list-group-item-action">
+  						<i class="fa fa-ban list-icons" aria-hidden="true"></i>
+  						&nbsp;&nbsp;Only me
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+  					<li class="list-group-item list-group-item-action">
+  						<i class="fa fa-handshake-o list-icons" aria-hidden="true"></i>
+  						My classmates
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+  					<li class="list-group-item list-group-item-action">
+  						<i class="fa fa-users list-icons" aria-hidden="true"></i>
+  						&nbsp;My batchmates
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-sitemap list-icons" aria-hidden="true"></i>
+  						&nbsp;My Department
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+  					<li class="list-group-item list-group-item-action">
+  						<i class="fa fa-graduation-cap list-icons" aria-hidden="true"></i>
+  						Only professors
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+  					<li class="list-group-item list-group-item-action active">
+  						<i class="fa fa-globe list-icons" aria-hidden="true"></i>
+  						&nbsp;&nbsp;Everyone
+  						<i class="fa fa-check float-right" aria-hidden="true"></i>
+  					</li>
+				</ul>
+				
+			</div>		        
+		</div>
+
+		<!--SCRIPTS FOR JAVASCRIPT -->
+    	
+		<script type="text/javascript">
+			$(document).ready(function () {
+    			$('#sidebarCollapse').on('click', function () {
+        			$('#sidebar').toggleClass('active');
+    			});
+			});
+
+			$(window).bind("resize", function () {
+    			console.log($(this).width())
+    			if ($(this).width() > 768) {
+        			$('.timeLabel').addClass('col-md-1')
+    			} 
+    			else {
+        			$('.timeLabel').removeClass('col-md-1')
+    			}
+			}).trigger('resize');
+		</script>
+	</body>
+</html>

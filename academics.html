@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+	<head>
+		<title>Academics - Student Mentorship Programme || VNIT, Nagpur</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style> /*need to put this in a separate file*/
+
+    		#Section1 {
+    			background-image: url(about-nav.png);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			color: white;
+    		}
+
+    		#Section2 {
+    			color: black;
+    		}
+
+    		.bg {
+    			background-image: url(vis1.jpg);
+    			background-position: center;
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    		}
+
+    		#Section3 {
+    			background-image:url(IMAGE1.png);
+    			background-size: auto;
+    			color: black;
+    		}
+
+    		.content {
+    			top: 0;
+    			color: white;
+    			width: 100%;
+    			padding: 30px 20px;
+    			position: absolute;
+    			text-align: center;
+    			left: -1px;
+    		}
+
+    		body, html {
+    			width: auto;
+    			overflow-x: hidden;
+    			font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;    			 
+    		}
+
+    		.navbar {
+    			background-color: rgb(25,73,8);
+    			font-size: 14px;
+    		}
+
+    		.navbar-toggler {
+    			height: 27px;
+    			float: center;
+    		}
+
+    		.navbar-toggler-icon {
+    			height: 20px;
+    			position: relative;
+    			top:-3px;
+    		}
+
+    		.nav-item {
+    			padding: 0px 12px 0px 12px;
+    		}
+
+    		#menubutton {
+    			position: relative;
+    			left: 43%;
+    			top:-1px;
+    		}
+
+    		.column {
+    			float: left;
+    			width: 33.33%;
+    			padding: 5px;
+
+			}
+
+			/* Clearfix (clear floats) */
+			.row::after {
+			    content: "";
+			    clear: both;
+			    display: table;
+			}
+
+			.dept {
+				padding-left: 100px;
+				padding-right: 100px;
+			} 
+
+			.container1 {
+			    position: relative;
+			    width: 100%;
+			}
+
+			.image {
+				opacity: 1;
+				display: block;
+				width: 100%;
+				height: auto;
+				transition: .5s ease;
+				backface-visibility: hidden;
+			}
+
+			.middle {
+				transition: .5s ease;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				text-align: center;
+				background-color: rgba(0,0,0,0.6);
+				width: 100%;
+				height: 100%;
+			}
+
+			.container1:hover .image {
+			 	opacity: 1;
+			}
+
+			.container1:hover .middle {
+			  	opacity: 1;
+			}
+
+			.text {
+				margin: 0;
+				color: white;
+			  	width: 100%;
+			  	font-size: 18px;
+			  	position: absolute;
+			  	padding: 10px;
+			  	left: 50%;
+			  	top: 50%;
+			  	margin-right: -50%;
+			  	transform: translate(-50%, -50%);
+			  	-ms-transform: translate(-50%, -50%);			  
+			}
+
+    		#Section6 {
+    			background-color: black;
+  				color: grey;
+  				font-size: 14px;
+    		}
+
+    		@media only screen and (max-width: 992px) {
+    			#timerow {
+    				display: none;
+    			}
+
+    			.dept {
+    				padding-right: 20px;
+    				padding-left: 20px;
+    				padding-top: 0px;
+    				padding-bottom: 0px;
+    			}
+
+    			.text {
+    				font-size: 13px;
+    			}
+
+    			.btn {
+    				font-size: 10px;
+    			}
+
+    		}
+
+    		@media only screen and (max-width: 768px) {
+    			.dept {
+    				padding: 0px 50px;
+    			}
+
+    			.column {
+    				width: 100%;
+    			}
+
+    			.text {
+    				font-size: 16px;
+    			}
+
+    			.btn {
+    				font-size: 13px;
+    			}
+    		}
+
+    		@media only screen and (min-width: 992px) {
+    			#navbar-search, #mob-btn {
+    				display: none;
+    			}
+    		}
+
+    		@media only screen and (max-width: 1200px) {
+    			.dept {
+    				padding-bottom: 10px;
+    				padding-top: 10px;
+    			}
+    		}
+
+    	</style>
+
+    	<script type="text/javascript">
+    		function startTime() {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('time').innerHTML =
+			    h + ":" + m + ":" + s;
+			    var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+
+			var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			var d = new Date(dateString);
+			var dayName = days[d.getDay()];
+			document.getElementById('weekday').innerHTML=dayName;
+    	</script>
+
+	</head>
+
+	<body onload="startTime()">
+
+		
+			<div id="Section1">
+				<div class="container">
+					<div class="row" style=" padding-top: 15px; padding-bottom: 10px;">
+						<div class="col-md-6">
+							<img src="label-v11.png" width="90%" id="logo">
+						</div>
+						<div class="col-md-6" id="timerow">
+							<div class="row" style="padding-bottom: 7px;"> 
+
+								<!--the reason why the text didn't float to the right is because I was definining it for the entire row and it was already full in the container space. I need to define for the text itself.-->
+
+								<div style="display: inline-block; text-align: right; width: 100%; font-size: 13px;">
+									Contact Us&nbsp;&nbsp;&nbsp;&nbsp;
+									Maps&nbsp;&nbsp;&nbsp;&nbsp;
+									Sitemap&nbsp;&nbsp;
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									Abu Dhabi,&nbsp;Mon&nbsp
+									<span id="time"></span>
+									<script>//console.log(dayName);//need to find a way to display day here</script>
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									<span style="font-size: 14px;">
+										<i class="fa fa-facebook-square"></i>&nbsp;
+										<i class="fa fa-twitter-square"></i>&nbsp;
+										<i class="fa fa-linkedin-square"></i>&nbsp;
+										<i class="fa fa-instagram"></i>
+									</span>
+								</div>
+								<script type="text/javascript">
+									var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+									var d = new Date(dateString);
+									var dayName = days[d.getDay()];
+									document.getElementById('weekday').innerHTML=dayName;
+						 			//document.getElementById('date').innerHTML=Date();
+								</script> 
+							</div>
+							<div class="row">
+								<form role="form" class="form-horizontal" style="display: inline-block; width: 100%; text-align: right;">
+									<div class="form-group">
+										<div class="form-row float-right">
+											<div class="col-md-auto">
+												<input placeholder=" Search..." size="30" style="color: black;">
+												<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+											</div>
+											<div class="col">
+												<button type="button" class="btn btn-warning btn-sm">Student Portal Login</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark py-0">
+				<div class="container">
+					<div id="menubutton" class="py-1">
+						<button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbar01" aria-controls="navbar01" aria-expanded="false" aria-label="Toggle navigation">
+		        			<span class="navbar-toggler-icon"></span>
+		      			</button>
+		      		</div>
+
+			      	<div class="collapse navbar-collapse" id="navbar01">
+			        	<ul class="navbar-nav mr-auto">
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">About</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link active" href="#">Academics<span class="sr-only">(current)</span></a></b>
+			        		</li>
+			        		<li class="nav-item">
+			        			<b><a class="nav-link" href="#">Mentors</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">VNIT mainsite</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">Forum</a></b>
+			        		</li>
+			        	</ul>
+			        	<form class="form-inline my-2 my-md-0" id="navbar-search">
+			        		<input placeholder=" Search..." size="40" style="color: black;">
+							<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+			      	</div>
+			    </div>
+		    </nav>
+
+		     <div id="Section2">
+		    	<div class="container">
+		    		<div class="row bg">
+		    			<div class="col-md-12" style="text-align: center; padding: 3rem 4rem;">
+				    		<h1><b>Academics and Student Life at VNIT</b></h1>
+				    	</div>		    			
+		    		</div>
+		    	</div>
+		    </div>
+
+
+		    <div id="Section3">
+		    	<div class="container">
+		    		<div class="row" style="padding: 25px 0px; font-size: 15px; ">
+		    			<div class="col" style="text-align: justify;">
+		    				There are eight B.Tech departments at VNIT and one B.Arch programme at the undergraduate level. Each department has their own website, syllabus and a dedicated team of specialized professors who teach every subject that is included in the curriculum for the student enrolled. Following is a list of departments for undergraduate degrees in both the Engineering and Architecture Disciplines.<br>
+		    			</div>
+		    		</div>
+		    		<div class="row dept">
+		    			<div class="column">
+		    				<div class="container1">
+			    				<img src="acadpics/ARCHITECTURE.jpg" class="image" width="100%;">
+			    				<div class="middle">
+			    					<div class="text">
+			    						Architecture and Planning<br>
+			    						<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+			    					</div>
+			    				</div>
+			    			</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/CHEM3.jpg" width="100%">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Chemical Engineering<br>
+		    							<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+		    						</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/CIV5.jpg" width="100%">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Civil Engineering<br>
+		    							<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+		    					</div>
+		    				</div>
+		    			</div>		    			
+		   			</div>
+		    		<div class="row dept">
+		    			<div class="column">
+		    				<div class="container1">
+			    				<img src="acadpics/CSE1.jpeg" width="100%;">
+			    				<div class="middle">
+			    					<div class="text">
+			    						Computer Science and Engineering<br>
+				    					<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+			    				</div>
+			    			</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/ECE1.jpg" width="100%">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Electronics and Communication Engineering<br>
+		    							<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/EEE2.jpg" width="100%">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Electrical and Electronics Communication<br>
+			    						<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+		    					</div>
+		    				</div>
+		    			</div>		    			
+		    		</div>
+		    		<div class="row dept">
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/MECH.jpg" width="100%;">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Mechanical Engineering<br>
+		    							<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+		    					<img src="acadpics/META2.jpg" width="100%">
+		    					<div class="middle">
+		    						<div class="text">
+		    							Metallurgy Engineering<br>
+		    							<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="column">
+		    				<div class="container1">
+			    				<img src="acadpics/MIN1.jpg" width="100%">
+			    				<div class="middle">
+			    					<div class="text">
+			    						Mining Engineering<br>
+			    						<button type="button" class="btn btn-sm btn-success">Department website</button>
+										<button type="button" class="btn btn-sm btn-default">Coursebook</button>
+									</div>
+			    				</div>
+			    			</div>
+		    			</div>		    			
+		    		</div>
+		    		<div class="row" style="padding: 25px 0px; font-size: 15px;">
+		    			<div class="col" style="text-align: justify;">
+							Each B.Tech programme consists of 8 semesters and the B.Arch programme consists of 10 semesters. At the end of the course, students must complete atleast 320 credits. In each semester, students must register themselves for DC (Compulsory courses), DE (Elective courses), OC (Optional courses), HM (Humanity Courses) and AU (Audit Courses) - cumulative credit points and cgpa scores are calculated per semester. This also includes practical courses(labs), workshops and the final year thesis.<br><br>
+
+							Grading per course is decided by the Professor incharge of that course. Any student that fails to cross the minimum pass score at the end of each course per semester will have to retake the final exam as a re-exam during the holidays. If a student fails to pass at this attempt, the subject becomes a backlog and must be registered again in the consecutive odd or even semester. For first year students, there is a special provision for clearing all the backlogs in the first year - Summer Term - a 2-3 month course that takes place during the summer break of the academic year. No student is allowed to have more than 8 backlog subjects at a time. If any student is found to be consistent in poor academic performance, he/she may be granted a "NFTE" (Not Fit for Technical Education) certificate and may be discontinued from their course. <br><br>
+
+							Each student is assigned a mentor, department faculty advisor and department mentor faculty advisor. Depending on the poor performance of a student, the concerned faculty along with the mentor will work together with the student to improve the student's grades. Students with excellent academic records will be awarded for their performance during the course of their respective programmes. <br><br>
+
+							At VNIT, we strive for excellence and our programmes are tailored to provide enough oppurtunities and resources to all students from all kinds of backgrounds. For more information, please visit the VNIT official website.<br><br>
+			    			
+						</div>
+		    		</div>
+		    	</div>
+		    </div>
+	
+
+		<div id="Section3">
+			
+		</div>
+
+		<div id="Section4">
+			
+		</div>
+
+		<div id="Section5">
+			
+		</div>
+
+		<div id="Section6">
+			<div class="container">
+				<div class="row" style="border-width: 0px 0px 1px 0px; border-style: solid;">
+					<div class="col-md-10">
+						<br><h5 style="position: relative; top: 7px; font-size: 17px;">Visvesvaraya National Institute of Technology, Nagpur</h5>
+					</div>
+					<div class="col-md-2">
+						<br><h4>
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+							<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+						</h4>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 10px;">
+					<div class="col-md-4">
+						South Ambazari Road,<br>
+						Abhyankar Nagar, Nagpur,<br> 
+						Maharashtra - 440010, India<br>
+						+91 712 222 2828
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Contact Us</a><br>
+							<a href="#" style="color: grey;">Map and Directions</a><br>
+							<a href="#" style="color: grey;">Emergency Information</a><br>
+						</b>
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Privacy Policy</a><br>
+							<a href="#" style="color: grey;">VNIT mainsite</a><br>
+							<a href="#" style="color: grey;">Counsellor login</a><br>
+							<a href="#" style="color: grey;">Sitemap</a>
+						</b>
+					</div>
+					<div class="col-md-2">
+						<b>
+							<a href="#" style="color: grey;">Link1 </a><br>
+							<a href="#" style="color: grey;">Lorem Ipsum Dolor Ipsum</a><br>
+							<a href="#" style="color: grey;">Some Information</a><br>
+						</b>
+					</div>
+				</div>
+				<div class="row"><br></div>
+				<div class="row">
+					<div class="col-md-12" style="text-align: center; font-size: 11px; color: #4d4d4d;">
+						Copyright 2017&nbsp;&copy;&nbsp;Visvesvaraya National Institute of Technology, Nagpur<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      .fa {
+        font-size: 17px;
+      }
+
+      .flex-column > .nav-item > a {
+        color: #141f1f;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      .flex-column > .nav-item > a:hover {
+        color: white;
+      }
+
+      .fa:hover {
+        color: inherit;
+      }
+
+      /* ---------------------------------------------------
+          SIDEBAR STYLE
+      ----------------------------------------------------- */
+
+      .wrapper {
+        /* display: flex;
+        align-items: stretch;
+        width: 100%; */
+        display: block;
+      }
+
+      #sidebar {
+        font-size: 14px; 
+        background-color: #53c68a; 
+        color: #527a7a;
+        width: 235px;
+        height: 100vh;
+        position: fixed;
+        padding-top: 10;
+        left: -235px;
+        z-index: 3; //top most layer
+        transition: all 0.3s;
+        overflow-y: scroll;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+      }
+
+      #sidebar.active {
+        left: 0;
+        transition: all 0.3s;
+      }
+
+      .navbar-brand {
+        width: 220px;
+        text-align: center;
+      }
+
+      #dismiss {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: center;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        background-color: rgba(255,255,255,0.3);
+      }
+
+      #dismiss:hover {
+        background-color: rgba(255,255,255,0.8);
+        color: grey;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .overlay.active {
+        display: block;
+        opacity: 1;
+      }
+
+      @media only screen and (max-width: 768px) {
+          /*#sidebar {
+              margin-left:0px;
+              width: 25%;
+          }
+          #sidebar.active {
+              margin-left: -20%;
+          } */
+      }
+
+      #content {
+        padding: 20px;
+        width: 100%;
+        transition: all 0.3s;
+        position: absolute;
+      }
+
+      
+    </style>
+
+    <script type="text/javascript">
+      
+    </script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark p-0">
+          <a class="navbar-brand" href="#">Fixed navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+            <form class="form-inline mt-2 mt-md-0 mr-auto"> <!--style="position: relative; left: -16px;" -->
+              <input class="form-control mr-sm-0" style="border-radius:0" size="20" type="text" placeholder="Enter query here..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav">
+                <li class="nav-item px-1">
+                  <a class="nav-link" href="#">Welcome, Nisreen Khambaty</a>
+                </li>
+                <li class="nav-item px-2" style="background-color: black;">
+                  <a class="nav-link" href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log out</a>
+                </li>
+            </ul>
+          </div>
+      </nav> 
+
+      <div class="wrapper">   
+      <nav id="sidebar">
+
+        <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+        <div>
+          <h6 class="px-3 mt-3 mb-1">Account Options</h6>
+            <ul class="nav flex-column">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Newsfeed <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                      <i class="fa fa-bell-o" aria-hidden="true"></i>
+                      &nbsp;&nbsp;Notifications&nbsp;<span class="badge badge-warning">1</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fa fa-inbox" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Inbox&nbsp;<span class="badge badge-danger">3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                      &nbsp;&nbsp;Compose
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Trash&nbsp;<span class="badge badge-secondary">1</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Forum
+                    </a>
+                </li>
+            </ul>
+          <h6 class="px-3 mt-4 mb-1">Common links</h6>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-university" aria-hidden="true"></i>
+                        &nbsp;&nbsp;VNIT mainsite
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        &nbsp;&nbsp;SMP mainsite
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Mentors
+                    </a>
+                </li>
+            </ul>
+            <h6 class="px-3 mt-4 mb-1">Information</h6>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                      &nbsp;&nbsp;My Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Contact Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Help
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-map-o" aria-hidden="true"></i>
+                        &nbsp;&nbsp;Maps
+                    </a>
+                </li>
+            </ul>
+          </div>
+      </nav>
+
+      <div id="content">
+         
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fa fa-align-left"></i>
+              <span>Open Sidebar</span>
+            </button>
+        <h5><b style="color: green;">What are the objectives of the SMP?</b></h5>
+        The objectives of the SMP include: <br>
+        • To help undergraduate fresh students understand the challenges and opportunities present in the Institute and develop a smooth transition to campus life.<br>
+        • To counsel academically weak undergraduate first year students and to play an important role in helping troubled students cope with academic, extra-academic and personal issues, <br> 
+        • To provide positive role models to first year undergraduate students in the institute. <br> 
+        • To proactively try to identify various issues of concern to the general student populace and to bring them to the notice of the concerned authorities. <br>
+        • To provide them one such friend among the seniors, with whom they can freely share their problems, ask any queries which they otherwise feel shy to ask or share.<br> 
+        <br>
+        The SMP endeavours to pursue these objectives by carefully identifying those who can act as an anchor and guide for a freshman or an academically weak student to bank upon. Student Mentors are selected to play this role and are given the authority to pursue the mission of this programme. <br>
+        <br>
+
+        <h5 style="color: green;"><b>What kind of students are appointed as student mentors?</b></h5>
+        Student Mentors are respected, well-balanced students usually belonging to the 3rd year B. Tech and 4th year B.Arch. A student mentor's role may be perceived to be facilitative, supportive and developmental for the student community in general. They must be all-rounders in academic and extra-curricular activities in order to promote a healthy lifestyle at college for the students. They must also have a great EQ (Emotional Intelligence Quota) in order to be empathically able to communicate and relate to their mentees problems.<br>
+        <br>
+      </div>              
+    
+
+    <div class="overlay"></div>
+
+  </div>
+
+    <!--SCRIPTS FOR JAVASCRIPT -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+  </body>
+</html>

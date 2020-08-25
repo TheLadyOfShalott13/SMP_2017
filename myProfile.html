@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Account</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style type="text/css">
+			.fa {
+				font-size: 17px;
+			}
+
+			.flex-column > .nav-item > a {
+				color: #141f1f;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+			.flex-column > .nav-item > a:hover {
+				color: white;
+			}
+
+			.fa:hover {
+				color: inherit;
+			}
+
+			/* ---------------------------------------------------
+    			SIDEBAR STYLE
+			----------------------------------------------------- */
+
+			.wrapper {
+				display: flex;
+				align-items: stretch;
+				width: 100%;
+			}
+
+			#sidebar {
+				font-size: 14px; 
+				background-color: #53c68a; 
+				color: #527a7a;
+				min-width: 185px;
+				max-width: 185px;
+				height: auto;
+				transition: all 0.3s;
+			}
+
+			#sidebar.active {
+				margin-left: -185px;
+			}
+
+			.sidebarList > .active {
+				background-color: rgba(255,255,255,0.4);
+			}
+
+			.navbar-brand {
+				width: 170px;
+				text-align: center;
+			}
+
+			@media only screen and (min-width: 768px) {
+				#sidebarCollapse {
+					display: none;
+				}
+			}
+
+			#content {
+				padding: 20px;
+				width: 100vw;
+				padding-right: 50px;
+				font-size: 15px;
+			}
+
+			#emailList > li {
+				padding: 15px 0px 15px 7px;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: grey;
+				background-color: #d5d5c3;
+				position: relative;
+				left: -40px;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				var sideHeight = jQuery('.menu_manager').height();
+				jQuery('#sidebar').css('height', sideHeight + 'px');
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark p-0">
+      		<a class="navbar-brand" href="#">Fixed navbar</a>
+      		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="navbar-toggler-icon"></span>
+      		</button>
+      		<div class="collapse navbar-collapse" id="navbarCollapse">
+      			
+      			<form class="form-inline mt-2 mt-md-0 mr-auto"> <!--style="position: relative; left: -16px;" -->
+       				<input class="form-control mr-sm-0" style="border-radius:0" size="20" type="text" placeholder="Enter query here..." aria-label="Search">
+          			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        		</form>
+        		<ul class="navbar-nav">
+          			<li class="nav-item px-1">
+            			<a class="nav-link" href="#">Welcome, Nisreen Khambaty</a>
+          			</li>
+          			<li class="nav-item px-2" style="background-color: black;">
+            			<a class="nav-link" href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log out</a>
+          			</li>
+        		</ul>
+      		</div>
+    	</nav> 
+
+	    <div class="wrapper">		
+			<nav id="sidebar">
+				<h6 class="px-3 mt-3 mb-1">Account Options</h6>
+				<ul class="nav flex-column sidebarList">
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+					        <i class="fa fa-home" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Newsfeed <span class="sr-only">(current)</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				      	<a class="nav-link" href="#">
+				          	<i class="fa fa-bell-o" aria-hidden="true"></i>
+				          	&nbsp;&nbsp;Notifications&nbsp;<span class="badge badge-warning">1</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				      	<a class="nav-link" href="#">
+				       		<i class="fa fa-inbox" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Inbox&nbsp;<span class="badge badge-danger">3</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+					        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					        &nbsp;&nbsp;Compose
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-trash-o" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Trash&nbsp;<span class="badge badge-secondary">1</span>
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-rss" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Forum
+				    	</a>
+				    </li>
+				</ul>
+				<h6 class="px-3 mt-4 mb-1">Common links</h6>
+				<ul class="nav flex-column sidebarList">
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-university" aria-hidden="true"></i>
+				            &nbsp;&nbsp;VNIT mainsite
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-list" aria-hidden="true"></i>
+				            &nbsp;&nbsp;SMP mainsite
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-users" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Mentors
+				        </a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+							<i class="fa fa-address-book-o" aria-hidden="true"></i>
+				        	&nbsp;&nbsp;Contact Us
+				        </a>
+				    </li>
+				</ul>
+				<h6 class="px-3 mt-4 mb-1">Information</h6>
+				<ul class="nav flex-column sidebarList">
+				  	<li class="nav-item active">
+						<a class="nav-link" href="#">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+							&nbsp;&nbsp;My Profile
+						</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fa fa-cog" aria-hidden="true"></i>
+								&nbsp;&nbsp;Settings
+							</a>
+					</li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">
+				            <i class="fa fa-question-circle" aria-hidden="true"></i>
+				            &nbsp;&nbsp;Help
+				        </a>
+				    </li>
+				</ul>
+			</nav>
+
+			<div id="content">
+				<h3>Edit My Profile</h3>
+				<button type="button" id="sidebarCollapse" class="btn btn-info btn-sm">
+	      			<i class="fa fa-align-left"></i>
+	      			<span>Open Sidebar</span>
+	      		</button>
+	      		<br>
+	      		<!-- Example split danger button -->
+				<form>
+					<div class="form-group row">
+    					<label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="firstName" placeholder="" value="Barry">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="middleName" class="col-sm-2 col-form-label">Middle Name</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="middleName" placeholder="" value="Henry">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="lastName" placeholder="" value="Allen">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="phoneNumber" class="col-sm-2 col-form-label">Phone no.</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="phoneNumber" placeholder="" value="123456789">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="birthDay" class="col-sm-2 col-form-label">Date of Birth</label>
+    					<div class="col-sm-10">
+      						<input type="date" class="form-control" id="birthDay" placeholder="" value="1989-03-14">
+    					</div>
+  					</div>
+  					<fieldset class="form-group">
+    					<div class="row">
+      						<legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      						<div class="col-sm-10">
+        						<div class="form-check">
+          							<input class="form-check-input" type="radio" name="gridRadios" id="male" value="M" checked>
+							        <label class="form-check-label" for="male">
+							        	Male
+							        </label>
+        						</div>
+						        <div class="form-check">
+						        	<input class="form-check-input" type="radio" name="gridRadios" id="female" value="F">
+						        	<label class="form-check-label" for="female">
+						            	Female
+						          	</label>
+						        </div>
+					      	</div>
+					    </div>
+					</fieldset>
+					<div class="form-group row">
+    					<label for="address" class="col-sm-2 col-form-label">Address</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="address" placeholder="" value="Central City">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="emergencyContact" class="col-sm-2 col-form-label">Emergency Contact</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="emergencyContact" placeholder="" value="Iris West-Allen (wife), Central City">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="enrollmentNumber" class="col-sm-2 col-form-label">Enrollment no.</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="enrollmentNumber" placeholder="" value="BT13CSE093">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+	      				<label for="inputHostel" class="col-sm-2 col-form-label">Hostel Block</label>
+	      				<div class="col-sm-10">
+		      				<select id="inputHostel" class="form-control">
+								<option>Select an option...</option>
+								<option selected>Day scholar</option>
+								<option>HB-1(Boys)</option>
+								<option>HB-2(Boys)</option>
+								<option>HB-3(Boys)</option>
+								<option>HB-4(Boys)</option>
+								<option>HB-5(Boys)</option>
+								<option>HB-6(Boys)</option>
+								<option>HB-7(Boys)</option>
+								<option>HB-8(Boys)</option>
+								<option>HB-9(Boys)</option>
+								<option>HB-10(Girls)</option>
+								<option>HB-11(Girls)</option>
+								<option>New first year girls block</option>
+								<option>Bajaj Nagar Hostel(Girls)</option>
+	      					</select>
+	    				</div>
+	    			</div>
+	    			<div class="form-group row">
+	    				<label for="roomNumber" class="col-sm-2 col-form-label">Room no.</label>
+    					<div class="col-sm-10">
+      						<input type="text" class="form-control" id="roomNumber" placeholder="" value="434 or G-15">
+    					</div>
+	    			</div>
+	    			<div class="form-group row">
+	      				<label for="inputDept" class="col-sm-2 col-form-label">Department</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="inputDept">
+	      						<option>Select your department...</option>
+	      						<option>Architecture and Planning</option>
+	      						<option selected>Chemical Engineering</option>
+	      						<option>Civil Engineering</option>
+	      						<option>Computer Science and Engineering</option>
+	      						<option>Electronics and Communication Engineering</option>
+	      						<option>Electrical and Electronics Engineering</option>
+	      						<option>Mechanical Engineering</option>
+	      						<option>Metallurgy Engineering</option>
+	      						<option>Mining Engineering</option>
+	      					</select>
+	    				</div>
+	    			</div>
+	    			<div class="form-group row">
+	    				<label for="inputMentor" class="col-sm-2 col-form-label">Mentor:</label>
+	    				<div class="col-sm-10">
+							<select class="form-control" id="inputMentor">
+		      					<option selected>Select your mentor...</option>
+		      					<option>Vatsal Gosar</option>
+		      					<option>Anushka Jejani</option>
+		      					<option>Harshada Kumbhare</option>
+		      					<option>Umesh Sharnagat</option>
+		      					<option>Nikita Dhole</option>
+		      					<option selected>Akshay Bhawsar</option>
+		      					<option>Dewang Palav</option>
+		      					<option>Snehal Dange</option>
+		      				</select>
+		      			</div>	    						
+	    			</div>
+	    			<div class="form-group row">
+						<label for="inputProf" class="col-sm-2 col-form-label">Professor in charge:</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="inputProf">
+		      					<option selected>Select your professor-in-charge...</option>
+		      					<option selected>Ravindra Keskar</option>
+		      					<option>Deepti Shrimankar</option>
+		      					<option>Shital Raut</option>
+		      					<option>A. Pimple</option>
+		      					<option>M.P. Kurhekar</option>
+		      					<option>Ashish Tiwari</option>
+		      					<option>Meera Dhabu</option>
+		      					<option>Umesh Deshpande</option>
+		      					<option>Anil Mokhade</option>
+		      					<option>Mansi A. Radke</option>
+		      					<option>P. Deshpande</option>
+		      				</select>
+		      			</div>    						
+	    			</div>
+	    			<div class="form-group row">
+    					<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+    					<div class="col-sm-10">
+      						<input type="inputEmail" class="form-control" id="email" placeholder="Email" value="barryallen@starlabs.com">
+    					</div>
+  					</div>
+  					<!-- <div class="form-group row">
+    					<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    					<div class="col-sm-10">
+      						<input type="password" class="form-control" id="inputPassword" placeholder="Password" value="iamtheflash">
+    					</div>
+  					</div>
+  					<div class="form-group row">
+    					<label for="confirmPassword" class="col-sm-2 col-form-label">Confirm password</label>
+    					<div class="col-sm-10">
+      						<input type="password" class="form-control" id="confirmPassword" placeholder="Password" value="iamtheflash">
+    					</div>
+  					</div> -->
+					<div class="form-group row">
+						<div class="col-sm-10">
+					    	<button type="submit" class="btn btn-success">Save Changes</button>
+					    </div>
+					</div>
+				  </form>
+			</div>		        
+		</div>
+
+		<!--SCRIPTS FOR JAVASCRIPT -->
+    	
+		<script type="text/javascript">
+			$(document).ready(function () {
+    			$('#sidebarCollapse').on('click', function () {
+        			$('#sidebar').toggleClass('active');
+    			});
+			});
+
+			$(window).bind("resize", function () {
+    			console.log($(this).width())
+    			if ($(this).width() > 768) {
+        			$('.timeLabel').addClass('col-md-1')
+    			} 
+    			else {
+        			$('.timeLabel').removeClass('col-md-1')
+    			}
+			}).trigger('resize');
+		</script>
+	</body>
+</html>

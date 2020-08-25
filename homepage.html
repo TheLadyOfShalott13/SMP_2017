@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+	<head>
+		<title>Home - Student Mentorship Programme || VNIT, Nagpur</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style> /*need to put this in a separate file*/
+
+    		#Section1 {
+    			background-image: url(a1.png);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			color: white;
+    		}
+
+    		#Section2 {
+    			background-image: url(welcome-banner.png);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    		}
+
+    		/*#overall {
+    			background-image: url(gate-new.png);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    		}*/
+
+    		@media only screen and (max-width: 992px) {
+    			#timerow {
+    				display: none;
+    			}
+
+    			.jumbotron {
+    				width: 100%;
+    			}
+
+    		}
+
+    		@media only screen and (min-width: 992px) {
+    			#navbar-search, #mob-btn {
+    				display: none;
+    			}
+
+    			.jumbotron {
+    				width: 43%;
+    			}
+    		}
+
+    		body, html {
+    			width: auto;
+    			overflow-x: hidden;
+    			font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;    			 
+    		}
+
+    		.navbar {
+    			background-color: rgb(25,73,8);
+    			font-size: 14px;
+    		}
+
+    		.navbar-toggler {
+    			height: 27px;
+    			float: center;
+    		}
+
+    		.navbar-toggler-icon {
+    			height: 20px;
+    			position: relative;
+    			top:-3px;
+    		}
+
+    		.nav-item {
+    			padding: 0px 12px 0px 12px;
+    		}
+
+    		#menubutton {
+    			position: relative;
+    			left: 43%;
+    			top:-1px;
+    		}
+
+    		.jumbotron {
+    			background-color: rgba(0,0,0,0.5);
+  				color: white;
+    		}
+
+    		#Section3 {
+    			background-color: #212121;
+  				color: white;
+  				text-align: center;
+    		}
+
+    		#Section4 {
+  				background-image: url("banner.jpg");
+  				background-size: cover;
+  				background-repeat: no-repeat;
+  				color: white;
+    		}
+
+    		#Section5 {
+    			background-color: white;
+    			text-align: center;
+    		}
+
+    		.quote {
+    			font-size: 15px;
+    			padding: 10px 10px 0px 0px;
+    		}
+
+    		.qname {
+    			color: green;
+    			font-size: 13px;
+    			padding-top: 3px;
+    		}
+
+    		#Section6 {
+    			background-color: black;
+  				color: grey;
+  				font-size: 14px;
+    		}
+
+    	</style>
+
+    	<script type="text/javascript">
+    		function startTime() {
+			    var today = new Date();
+			    var h = today.getHours();
+			    var m = today.getMinutes();
+			    var s = today.getSeconds();
+			    m = checkTime(m);
+			    s = checkTime(s);
+			    document.getElementById('time').innerHTML =
+			    h + ":" + m + ":" + s;
+			    var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			    return i;
+			}
+
+			var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			var d = new Date(dateString);
+			var dayName = days[d.getDay()];
+			document.getElementById('weekday').innerHTML=dayName;
+    	</script>
+
+	</head>
+
+	<body onload="startTime()">
+
+		<div id="overall">
+
+			<div id="Section1">
+				<div class="container">
+					<div class="row" style=" padding-top: 15px; padding-bottom: 10px;">
+						<div class="col-md-6">
+							<img src="label-v11.png" width="90%" id="logo">
+						</div>
+						<div class="col-md-6" id="timerow">
+							<div class="row" style="padding-bottom: 7px;"> 
+
+								<!--the reason why the text didn't float to the right is because I was definining it for the entire row and it was already full in the container space. I need to define for the text itself.-->
+
+								<div style="display: inline-block; text-align: right; width: 100%; font-size: 13px;">
+									Contact Us&nbsp;&nbsp;&nbsp;&nbsp;
+									Maps&nbsp;&nbsp;&nbsp;&nbsp;
+									Sitemap&nbsp;&nbsp;
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									Abu Dhabi,&nbsp;Mon&nbsp
+									<span id="time"></span>
+									<script>//console.log(dayName);//need to find a way to display day here</script>
+									<span style="font-size: 15px;">
+										&nbsp;|&nbsp;
+									</span>
+									<span style="font-size: 14px;">
+										<i class="fa fa-facebook-square"></i>&nbsp;
+										<i class="fa fa-twitter-square"></i>&nbsp;
+										<i class="fa fa-linkedin-square"></i>&nbsp;
+										<i class="fa fa-instagram"></i>
+									</span>
+								</div>
+								<script type="text/javascript">
+									var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+									var d = new Date(dateString);
+									var dayName = days[d.getDay()];
+									document.getElementById('weekday').innerHTML=dayName;
+						 			//document.getElementById('date').innerHTML=Date();
+								</script> 
+							</div>
+							<div class="row">
+								<form role="form" class="form-horizontal" style="display: inline-block; width: 100%; text-align: right;">
+									<div class="form-group">
+										<div class="form-row float-right">
+											<div class="col-md-auto">
+												<input placeholder=" Search..." size="30" style="color: black;">
+												<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+											</div>
+											<div class="col">
+												<button type="button" class="btn btn-warning btn-sm">Student Portal Login</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark py-0">
+				<div class="container">
+					<div id="menubutton" class="py-1">
+						<button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbar01" aria-controls="navbar01" aria-expanded="false" aria-label="Toggle navigation">
+		        			<span class="navbar-toggler-icon"></span>
+		      			</button>
+		      		</div>
+
+			      	<div class="collapse navbar-collapse" id="navbar01">
+			        	<ul class="navbar-nav mr-auto">
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">About</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">Academics</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			        			<b><a class="nav-link" href="#">Mentors</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">VNIT mainsite</a></b>
+			        		</li>
+			        		<li class="nav-item">
+			           			<b><a class="nav-link" href="#">Forum</a></b>
+			        		</li>
+			        	</ul>
+			        	<form class="form-inline my-2 my-md-0" id="navbar-search">
+			        		<input placeholder=" Search..." size="40" style="color: black;">
+							<button style="background-color: grey; color: white; box-shadow: none; position: relative; left: -10px;"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</form>
+			      	</div>
+			    </div>
+		    </nav>
+
+		    <div id="Section2">
+		    	<div class="container">
+		    		<div class="row" style="padding: 85px 15px;">
+			    		<div class="jumbotron">
+				    		<h1 style="font-size: 40px;">Welcome</h1>
+							<h4 style="font-size: 20px;">VNIT, Nagpur's Student Mentorship Programme web portal.</h4>
+							<br>
+							<button class="btn btn-success btn-md">Register Now</button>&nbsp;
+							<button class="btn btn-warning btn-md" id="mob-btn">Student Portal Login</button>
+							<br>	
+			    		</div>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+
+		<div id="Section3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<br>
+						<h4 style="font-size: 22px;">This online portal experience includes </h4>
+						<br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-3" style="text-align: center;">
+						<img src="icons/inbox-new.png" width="100px" height="100px">
+						<h4 style="font-size: 17px; padding-top: 10px;">Personal Inbox</h4><br>
+					</div>
+					<div class="col-md-4" style="text-align: center;">
+						<img src="icons/chat1.png" width="100px" height="100px">
+						<h4 style="font-size: 17px; padding-top: 10px;">Public Forum</h4><br>
+					</div>
+					<div class="col-md-3" style="text-align: center;">
+						<img src="icons/user4.png" width="100px" height="100px">
+						<h4 style="font-size: 17px; padding-top: 10px;">Mentor Messaging</h4><br>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="Section4">
+			<div class="container">
+				<div class="row"><br><br><br><br><br></div>
+				<div class="row">
+					<div class="col-md-6" style="text-align: right; padding-left: 50px; border-width: 0px 3px 0px 0px; border-style: solid;">
+						<h4 style="font-size: 23px;"><b>Bridging the gap between seniority and freshmen to reap the benefits of an interactive society</b></h4>
+					</div>
+					<div class="col-md-5">
+						“To give real service, you must add something which cannot be bought or measured with money” - M. Visvesvaraya, keeping this in mind, we at VNIT are dedicated to investing the time and resources needed to develop our students' personalities in order to prepare them for the real world. <br><br>
+						<button style="background-color: rgba(0,0,0,0); color: white; box-shadow: none; border-radius: 3px; padding: 4px 10px; font-size: 14px;">Register Now</button> 
+						&nbsp; 
+					</div>
+				</div>
+				<div class="row"><br><br><br><br></div>
+			</div>
+		</div>
+
+		<div id="Section5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<br>
+						<br>
+						<h3 style="color: green;"><b>What our students think</b></h3>
+						<hr><br>
+					</div>
+				</div>
+				<div class="row" style="color: grey;">
+					<div class="col-md-3">
+						<img src="pics/anushkajejani.jpg" height="120px" width="120px">
+						<br>
+						<div class="qname">Anushka Jejani, CSE '17</div>
+						<div class="quote">"As a mentor, it was gratifying to be able to track all my mentees and resolve their commonly asked queries all on a single platform."</div>
+						<br><br>
+					</div>
+					<div class="col-md-3">
+						<img src="pics/akshaybhawsar.jpg" height="120px" width="120px">
+						<br>
+						<div class="qname">Akshay Bhawsar, CSE '17</div>
+						<div class="quote">"The best feature about this must be the forum. Students can now browse questions they have when they are shy in approaching us."</div>
+						<br><br>
+					</div>
+					<div class="col-md-3">
+						<img src="pics/hebajamal.jpg" height="120px" width="120px">
+						<br>
+						<div class="qname">Heba Jamal, CSE '16</div>
+						<div class="quote">"A great initiative in stepping towards a digital India within our own campus. Great way for us seniors to interact with juniors."</div>
+						<br><br>
+					</div>
+					<div class="col-md-3">
+						<img src="pics/hiteshsankhala.jpg" height="120px" width="120px">
+						<br>
+						<div class="qname">Hitesh Sankhala, CSE '17</div>
+						<div class="quote">"I was so scared in the beginning to approach any senior. Now I can message my mentors and ask them anything in a supervised manner."</div>
+						<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="Section6">
+			<div class="container">
+				<div class="row" style="border-width: 0px 0px 1px 0px; border-style: solid;">
+					<div class="col-md-10">
+						<br><h5 style="position: relative; top: 7px; font-size: 17px;">Visvesvaraya National Institute of Technology, Nagpur</h5>
+					</div>
+					<div class="col-md-2">
+						<br><h4>
+							<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							<i class="fa fa-twitter-square" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+							<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+						</h4>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 10px;">
+					<div class="col-md-4">
+						South Ambazari Road,<br>
+						Abhyankar Nagar, Nagpur,<br> 
+						Maharashtra - 440010, India<br>
+						+91 712 222 2828
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Contact Us</a><br>
+							<a href="#" style="color: grey;">Map and Directions</a><br>
+							<a href="#" style="color: grey;">Emergency Information</a><br>
+						</b>
+					</div>
+					<div class="col-md-3">
+						<b>
+							<a href="#" style="color: grey;">Privacy Policy</a><br>
+							<a href="#" style="color: grey;">VNIT mainsite</a><br>
+							<a href="#" style="color: grey;">Counsellor login</a><br>
+							<a href="#" style="color: grey;">Sitemap</a>
+						</b>
+					</div>
+					<div class="col-md-2">
+						<b>
+							<a href="#" style="color: grey;">Link1 </a><br>
+							<a href="#" style="color: grey;">Lorem Ipsum Dolor Ipsum</a><br>
+							<a href="#" style="color: grey;">Some Information</a><br>
+						</b>
+					</div>
+				</div>
+				<div class="row"><br></div>
+				<div class="row">
+					<div class="col-md-12" style="text-align: center; font-size: 11px; color: #4d4d4d;">
+						Copyright 2017&nbsp;&copy;&nbsp;Visvesvaraya National Institute of Technology, Nagpur<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

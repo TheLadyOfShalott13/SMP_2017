@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+	<head>
+		<title>Register - Student Mentorship Programme || VNIT, Nagpur</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style> /*need to put this in a separate file*/
+
+    		body, html {
+    			background-image: url("z1.jpg");
+    			background-repeat: no-repeat;
+    			background-size:cover;
+    			width: auto;
+    			overflow-x: hidden;
+    			font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;    			 
+    		}
+
+    		.mainbox {
+    			background-color: rgba(0,0,0,0.7);
+    			color: white;
+    			padding: 30px 60px;
+    			border-radius: 10px;
+    		}
+
+    		.brandname {
+    			text-align: center;
+    			border-bottom-color: white;
+    			border-bottom-width: 1px;
+    			border-bottom-style: solid;
+    		}
+
+    		.container {
+    			padding: 50px 70px;
+    		}
+
+    		#logo {
+				text-align: center;
+				position: relative;
+				padding-bottom: 20px;
+			}
+
+			.pagelabel {
+				text-align: center;
+				padding-bottom: 20px;
+			}
+    	</style>
+
+    	<script type="text/javascript">
+    		
+    	</script>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mainbox">
+					<div class="pagelabel">
+						<img src="logo.png" width="80px" id="logo">
+						<h3 class="brandname"><b>Student Mentorship Portal</b></h3>
+						<h5 style="font-size: 18px;">Registration Details</h5>
+					</div>
+					<form>
+						<div class="form-row">
+	    					<div class="form-group col-md-3">
+	      						<label for="firstName">First Name</label>
+	      						<input type="text" class="form-control" id="firstName" placeholder="(eg.) Hermoine">
+	    					</div>
+	    					<div class="form-group col-md-3">
+	      						<label for="middleName">Middle Name</label>
+	      						<input type="text" class="form-control" id="middleName" placeholder="(eg.) Jean">
+	    					</div>
+	    					<div class="form-group col-md-6">
+	      						<label for="lastName">Last Name</label>
+	      						<input type="text" class="form-control" id="lastName" placeholder="(eg.) Granger">
+	    					</div>
+	  					</div>
+	  					<div class="form-row">
+	  						<div class="form-group col-md-3">
+								<label for="phone">Personal contact number:</label>
+								<input type="text" name="phone" id="number" class="form-control">
+							</div>
+	  						<div class="form-group col-md-3">
+	  							<label for="birthday">Date of Birth (DD/MM/YYYY)</label>
+	  							<input type="date" name="birthday" id="birthday" class="form-control">
+	  						</div>
+	  						<div class="form-group col-md-2">
+	  							<label>Gender:</label><br>
+		  						<div class="form-check form-check-inline">
+	  								<input class="form-check-input" type="radio" name="gender" id="male" value="M">
+	  								<label class="form-check-label" for="male">Male</label>
+								</div>
+								<div class="form-check form-check-inline">
+	  								<input class="form-check-input" type="radio" name="gender" id="female" value="F">
+	  								<label class="form-check-label" for="female">Female</label>
+								</div>
+							</div>
+	  					</div>
+	  					<div class="form-group">
+	    					<label for="inputAddress">Address</label>
+	    					<input type="text" class="form-control" id="address" placeholder="1234 Main St">
+	  					</div>
+	  					<div class="form-group">
+	    					<label for="inputAddress2">Emergency Contact details</label>
+	    					<input type="text" class="form-control" id="emergency" placeholder="Ronald Bilius Weasley (friend), The Burrow, England; Ph. no: 123456789">
+	  					</div>
+	  					<div class="form-row">
+	    					<div class="form-group col-md-2">
+	      						<label for="enrollment_no">Enrollment no.</label>
+	      						<input type="text" class="form-control" id="enrollment_no" placeholder="BT13CSE094">
+	    					</div>
+	    					<div class="form-group col-md-3">
+	      						<label for="inputHostel">Hostel Block</label>
+	      						<select id="inputHostel" class="form-control">
+	        						<option selected>Select an option...</option>
+	        						<option>Day scholar</option>
+	        						<option>HB-1(Boys)</option>
+	        						<option>HB-2(Boys)</option>
+	        						<option>HB-3(Boys)</option>
+	        						<option>HB-4(Boys)</option>
+	        						<option>HB-5(Boys)</option>
+	        						<option>HB-6(Boys)</option>
+	        						<option>HB-7(Boys)</option>
+	        						<option>HB-8(Boys)</option>
+	        						<option>HB-9(Boys)</option>
+	        						<option>HB-10(Girls)</option>
+	        						<option>HB-11(Girls)</option>
+	        						<option>New first year girls block</option>
+	        						<option>Bajaj Nagar Hostel(Girls)</option>
+	      						</select>
+	    					</div>
+	    					<div class="form-group col-md-2">
+	      						<label for="room">Room no.</label>
+	      						<input type="text" class="form-control" id="room" placeholder="434 or G-15">
+	    					</div>
+	  					</div>
+	  					<div class="form-row">
+	    					<div class="form-group col-md-4">
+	      						<label for="inputDept">Department</label>
+	      						<select class="form-control" id="inputDept">
+	      							<option selected>Select your department...</option>
+	      							<option>Architecture and Planning</option>
+	      							<option>Chemical Engineering</option>
+	      							<option>Civil Engineering</option>
+	      							<option>Computer Science and Engineering</option>
+	      							<option>Electronics and Communication Engineering</option>
+	      							<option>Electrical and Electronics Engineering</option>
+	      							<option>Mechanical Engineering</option>
+	      							<option>Metallurgy Engineering</option>
+	      							<option>Mining Engineering</option>
+	      						</select>
+	    					</div>
+	    					<div class="form-group col-md-4">
+								<label for="inputMentor">Mentor:</label>
+								<select class="form-control" id="inputMentor">
+	      							<option selected>Select your mentor...</option>
+	      							<option>Vatsal Gosar</option>
+	      							<option>Anushka Jejani</option>
+	      							<option>Harshada Kumbhare</option>
+	      							<option>Umesh Sharnagat</option>
+	      							<option>Nikita Dhole</option>
+	      							<option>Akshay Bhawsar</option>
+	      							<option>Dewang Palav</option>
+	      							<option>Snehal Dange</option>
+	      						</select>	    						
+	    					</div>
+	    					<div class="form-group col-md-4">
+								<label for="inputProf">Professor in charge:</label>
+								<select class="form-control" id="inputProf">
+	      							<option selected>Select your professor-in-charge...</option>
+	      							<option>Ravindra Keskar</option>
+	      							<option>Deepti Shrimankar</option>
+	      							<option>Shital Raut</option>
+	      							<option>A. Pimple</option>
+	      							<option>M.P. Kurhekar</option>
+	      							<option>Ashish Tiwari</option>
+	      							<option>Meera Dhabu</option>
+	      							<option>Umesh Deshpande</option>
+	      							<option>Anil Mokhade</option>
+	      							<option>Mansi A. Radke</option>
+	      							<option>P. Deshpande</option>
+	      						</select>	    						
+	    					</div>
+	  					</div>
+	  					<div class="form-row">
+	  						<div class="form-group col-md-4">
+	  							<label for="email">Email:</label>
+	  							<input type="email" class="form-control" name="email" id="email" placeholder="emailaddress@example.com">
+	  						</div>
+	  						<div class="form-group col-md-4">
+	  							<label for="pwd">Password:</label>
+	  							<input type="password" name="pwd" class="form-control" id="pwd">
+	  						</div>
+	  						<div class="form-group col-md-4">
+	  							<label for="confirm">Confirm password:</label>
+	  							<input type="password" name="confirm" class="form-control" id="confirm">
+	  						</div>
+	  					</div>
+	  					<div class="form-row">
+	  						<div class="form-group col-md-8">
+	  							<button type="button" class="btn btn-block btn-success">Register</button>
+	  						</div>
+	  						<div class="form-group col-md-2">
+	  							<button type="button" class="btn btn-block btn-primary">Cancel/Clear</button>
+	  						</div>
+	  						<div class="form-group col-md-2">
+	  							<button type="button" class="btn btn-block btn-outline-light">Go back</button>
+	  						</div>	  						
+	  					</div>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
